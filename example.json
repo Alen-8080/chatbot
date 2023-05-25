@@ -1,0 +1,51 @@
+[
+    {
+      "query_text": "When is the registration deadline for MCA Integrated S4 (S) Examination May/June 2023 and MCA Integrated S6 (S) Examination May/June 2023?",
+      "query_type": "Exam Registration",
+      "relevant_keywords": ["registration deadline", "MCA Integrated", "S4 (S)", "S6 (S)", "Examination", "May/June 2023"],
+      "relevant_information": "Registration deadline is 14-05-2023"
+    },
+    {
+      "query_text": "hi",
+      "query_type": "greetings",
+      "relevant_keywords":["hi","hello","goodmorning"],
+      "relevant_information" : "hello !  How can i help you today"
+    },
+    {
+      "query_text": "Thank you",
+      "query_type": "Appreciation",
+      "relevant_keywords":["thanks","Thank you","good work"],
+      "relevant_information" : "Glad that i could be of service. If you have any queries feel free to ask "
+    },
+    {
+      "query_text": "What are the exams scheduled for May/June 2023?",
+      "query_type": "Exam Schedule",
+      "relevant_keywords": ["exams", "scheduled", "May/June 2023","MCA"],
+      "relevant_information": "MCA Integrated S4 (S) Examination May/June 2023, MCA Integrated S6 (S) Examination May/June 2023"
+    },
+    {
+      "query_text": "What is the last date for exam registration to B.Tech S4 (S,FE) Exam May 2023 (2015 Scheme)?",
+      "query_type": "Exam Registration",
+      "relevant_keywords": ["last", "date", "exam registration", "B.Tech", "S4 (S,FE)", "May 2023", "2015 Scheme"],
+      "relevant_information": "Last date for exam registration is 11-05-2023"
+    },
+    {
+      "query_text": "When is the exam scheduled for B.Tech S4 (S,FE) Exam May 2023 (2015 Scheme)?",
+      "query_type": "Exam Schedule",
+      "relevant_keywords": ["exam scheduled", "B.Tech", "S4 (S,FE)", "May 2023", "2015 Scheme"],
+      "relevant_information": "Exam is scheduled for May 2023"
+    },
+    {
+      "query_text": "What is the procedure to register for the B.Tech S4 (S,FE) Exam May 2023 (2015 Scheme)?",
+      "query_type": "Registration Procedure",
+      "relevant_keywords": ["procedure", "register", "B.Tech", "S4 (S,FE)", "May 2023", "2015 Scheme"],
+      "relevant_information": "Students need to register and pay the fee at their college office before the deadline"
+    },
+    {
+      "query_text": "exit",
+      "query_type": "termination",
+      "relevant_keywords":["bye","exit","end"],
+      "relevant_information" : "Have a nice day"
+    }
+    
+  ]
