@@ -1,13 +1,12 @@
-from flask import Flask, render_template, request
-
-# Import the necessary libraries and code
+from flask import Flask, render_template, request, redirect
 import json
 from sklearn.neural_network import MLPClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 import nltk
-nltk.download('averaged_perceptron_tagger')
 from nltk.tokenize import word_tokenize
 from nltk.tag import pos_tag
+
+nltk.download('averaged_perceptron_tagger')
 
 app = Flask(__name__)
 

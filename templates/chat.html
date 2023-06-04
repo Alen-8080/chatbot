@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KTU Chatbot</title>
+</head>
+<body>
+    <h1>KTU Chatbot</h1>
+
+    <form action="/" method="post">
+        <input type="text" name="user_input" placeholder="Enter your query">
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if relevant_info %}
+        <h3>Relevant information:</h3>
+        <p>{{ relevant_info }}</p>
+    {% endif %}
+    
+    {% if predicted_label %}
+        <h3>Predicted label:</h3>
+        <p>{{ predicted_label }}</p>
+    {% endif %}
+</body>
+</html>

@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>KTU Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_login.css') }}">
 </head>
 <body>
-    <h1>KTU Chatbot</h1>
-
-    <form action="/" method="post">
-        <input type="text" name="user_input" placeholder="Enter your query">
-        <input type="submit" value="Submit">
+  <div class="container">
+    <img src="{{ url_for('static', filename='ktu-logo.png') }}" alt="KTU Logo" class="logo">
+    <h1 class="title">Welcome to the KTU Chatbot</h1>
+    <form id="login-form">
+      <input type="text" name="username" id="username" class="input" placeholder="Enter your username" required>
+      <br>
+      <input type="password" name="password" id="password" class="input" placeholder="Enter your password" required>
+      <br>
+      <input type="submit" value="Login" class="button">
     </form>
-
-    {% if relevant_info %}
-        <h3>Relevant information:</h3>
-        <p>{{ relevant_info }}</p>
-    {% endif %}
-    
-    {% if predicted_label %}
-        <h3>Predicted label:</h3>
-        <p>{{ predicted_label }}</p>
-    {% endif %}
+    <p id="error" class="error"></p>
+  </div>
+  <script src="{{ url_for('static', filename='script_login.js') }}"></script>
 </body>
 </html>

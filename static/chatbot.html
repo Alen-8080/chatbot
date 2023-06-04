@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style_chat.css">
+</head>
+<body>
+  <div class="container">
+    <div class="chat-area" id="chat-area">
+      <div class="message bot-message">
+        <img src="ktu-logo.png" alt="KTU Logo" class="logo">
+        <p>Hello, this is a chatbot from KTU.</p>
+      </div>
+    </div>
+    <div class="prompt-bar">
+      <img src="user-logo.png" alt="User Logo" class="logo">
+      <form action="/" method="POST">
+        <input type="text" id="prompt-input" class="prompt-input" placeholder="Type your message here..." name="user_input">
+        <button id="submit-button" class="submit-button" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <script src="script_chat.js"></script>
+</body>
+</html>
