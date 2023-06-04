@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, jsonify
 import json
 from sklearn.neural_network import MLPClassifier
 from sklearn.feature_extraction.text import CountVectorizer
@@ -39,14 +39,18 @@ def home():
         user_query_vectorized = vectorizer.transform([" ".join(user_keywords)])
 
         predicted_label = clf.predict(user_query_vectorized)[0]
-        print(predicted_label)
         relevant_info = "Relevant information not found"
         for item in data:
             if item['query_type'] == predicted_label:
                 relevant_info = item['relevant_information']
                 break
 
-        return render_template('index.html', relevant_info=relevant_info,predicted_label=predicted_label)    
+        response = {
+            'predicted_label': predicted_label,
+            'relevant_info': relevant_info
+        }
+
+        return jsonify(response)
 
     return render_template('index.html')
 
