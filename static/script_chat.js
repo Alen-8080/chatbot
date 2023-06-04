@@ -11,14 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
     chatArea.appendChild(userMessage);
   }
 
-  // Function to display a bot message in the chat area
-  function displayBotMessage(message) {
-    const botMessage = document.createElement('div');
-    botMessage.classList.add('message', 'bot-message');
-    botMessage.innerHTML = `
-      <img src="ktu-logo.png" alt="KTU Logo" class="logo">
-      <p>${message}</p>`;
-    chatArea.appendChild(botMessage);
+  // Function to display the relevant information in the chat area
+  function displayRelevantInfo(relevantInfo) {
+    const infoMessage = document.createElement('div');
+    infoMessage.classList.add('message', 'bot-message');
+    infoMessage.innerHTML = `<p>${relevantInfo}</p>`;
+    chatArea.appendChild(infoMessage);
   }
 
   // Function to handle the form submission
@@ -37,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
       method: 'POST',
       body: new URLSearchParams({ user_input: userInput }),
     })
-      .then((response) => response.text())
+      .then((response) => response.json())
       .then((data) => {
-        // Display the Python reply in the chat area
-        displayBotMessage(data);
+        // Display the relevant information in the chat area
+        displayRelevantInfo(data.relevant_info);
       })
       .catch((error) => {
         console.error('Error:', error);
