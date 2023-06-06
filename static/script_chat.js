@@ -7,7 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
   function displayUserMessage(message) {
     const userMessage = document.createElement('div');
     userMessage.classList.add('message', 'user-message');
-    userMessage.innerHTML = `<p>${message}</p>`;
+    userMessage.innerHTML = `
+      <div class="avatar">
+        <img src="user-logo.png" alt="User Avatar" class="logo">
+      </div>
+      <p> ${message} </p>`;
     chatArea.appendChild(userMessage);
   }
 
@@ -15,7 +19,11 @@ document.addEventListener("DOMContentLoaded", function() {
   function displayRelevantInfo(relevantInfo) {
     const infoMessage = document.createElement('div');
     infoMessage.classList.add('message', 'bot-message');
-    infoMessage.innerHTML = `<p>${relevantInfo}</p>`;
+    infoMessage.innerHTML = `
+      <div class="avatar">
+        <img src="ktu-logo.png" alt="Chatbot Avatar" class="logo">
+      </div>
+      <p> ${relevantInfo} </p>`;
     chatArea.appendChild(infoMessage);
   }
 
