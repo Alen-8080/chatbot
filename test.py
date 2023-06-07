@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request, jsonify, send_from_directory
+from flask import Flask, render_template, request, jsonify
 from sklearn.neural_network import MLPClassifier
 from sklearn.feature_extraction.text import CountVectorizer
+import json
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.tag import pos_tag
-import json
-from extraction.scrape_ktu_announcements import scrape
+from extraction.scrape_main import get_notification_data
 
 nltk.download('averaged_perceptron_tagger')
 
@@ -24,17 +24,12 @@ X_vectorized = vectorizer.fit_transform([" ".join(keywords) for keywords in X])
 clf = MLPClassifier(hidden_layer_sizes=(100,), max_iter=1000)
 clf.fit(X_vectorized, y)
 
-def scrape_notification():
-    return scrape()
-
-notification = None  # Initialize notification variable
+# Retrieve initial notification data
+initial_notification = get_notification_data()
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    global notification
-
     if request.method == 'POST':
-        # Retrieve user input from the HTML form
         text = request.form['user_input']
         words = word_tokenize(text)
         tagged_words = pos_tag(words)
@@ -55,20 +50,20 @@ def home():
 
         response = {
             'predicted_label': predicted_label,
-            'relevant_info': relevant_info,
-            'initial_notification': notification
+            'relevant_info': relevant_info
         }
 
         return jsonify(response)
 
-    if notification is None:
-        notification = scrape_notification()
+    return render_template('index.html', initial_notification=initial_notification)
 
-    return render_template('index.html', initial_notification=notification)
+@app.route('/refresh', methods=['POST'])
+def refresh_notifications():
+    # Execute the scrape_main.py script and retrieve the latest notification data
+    notification = get_notification_data()
 
-@app.route('/announcements/<path:filename>')
-def serve_announcement(filename):
-    return send_from_directory('static/announcements', filename)
+    # Return the notification data as JSON
+    return jsonify(notification)
 
 if __name__ == '__main__':
     app.run(debug=True)

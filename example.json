@@ -2,8 +2,8 @@
   {
     "query_text": "When is the registration deadline for MCA Integrated S4 (S) Examination May/June 2023 and MCA Integrated S6 (S) Examination May/June 2023?",
     "query_type": "Exam Registration",
-    "relevant_keywords": ["registration", "deadline", "mca", "integrated", "s4", "examination", "may/june", "2023"],
-    "relevant_information": "Registration deadline is 14-05-2023"
+    "relevant_keywords": [ "mca", "registration", "deadline", "integrated", "s4", "examination", "may/june", "2023"],
+    "relevant_information": "Registration deadline is 14-05-2023 for MCA S4 exam"
   },
   {
     "query_text": "hi",
@@ -20,19 +20,19 @@
   {
     "query_text": "What are the exams scheduled for May/June 2023?",
     "query_type": "Exam Schedule",
-    "relevant_keywords": ["exams", "scheduled", "May/June", "2023"],
+    "relevant_keywords": ["exams","mca", "s4", "scheduled", "May/June", "2023"],
     "relevant_information": "MCA Integrated S4 (S) Examination May/June 2023, MCA Integrated S6 (S) Examination May/June 2023"
   },
   {
     "query_text": "What is the last date for exam registration to B.Tech S4 (S,FE) Exam May 2023 (2015 Scheme)?",
     "query_type": "Exam Registration",
-    "relevant_keywords": ["last", "date", "exam", "registration", "B.Tech", "S4", "S,FE", "May", "2023", "2015", "Scheme"],
+    "relevant_keywords": ["last", "date", "exam", "registration", "b", "tech", "S4", "S,FE", "May", "2023", "2015", "Scheme"],
     "relevant_information": "Last date for exam registration is 11-05-2023"
   },
   {
     "query_text": "When is the exam scheduled for B.Tech S4 (S,FE) Exam May 2023 (2015 Scheme)?",
     "query_type": "Exam Schedule",
-    "relevant_keywords": ["exam", "scheduled", "B.Tech", "S4", "S,FE", "May", "2023", "2015", "Scheme"],
+    "relevant_keywords": ["exam", "deadline", "scheduled", "b", "tech", "s4", "S,FE", "May", "2023", "2015", "Scheme"],
     "relevant_information": "Exam is scheduled for May 2023"
   },
   {

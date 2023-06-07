@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="avatar">
         <img src="user-logo.png" alt="User Avatar" class="logo">
       </div>
-      <p> ${message} </p>`;
+      <p>${message}</p>`;
     chatArea.appendChild(userMessage);
   }
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="avatar">
         <img src="ktu-logo.png" alt="Chatbot Avatar" class="logo">
       </div>
-      <p> ${relevantInfo} </p>`;
+      <p>${relevantInfo}</p>`;
     chatArea.appendChild(infoMessage);
   }
 

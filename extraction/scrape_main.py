@@ -1,4 +1,4 @@
-from scrape_ktu_announcements import scrape
+from extraction.scrape_ktu_announcements import scrape
 import pandas as pd
 from docx import Document
 
